@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>外包项目</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 1920px;
+				overflow: hidden;
+			}
+			.left{
+				width: 102px;
+				height: 2905px;
+				background: #051623;
+				float:left;
+			}
+			.left p{
+				width: 35px;
+				height: 1px;
+				background: #fff;
+				margin: 14px 32px;
+			}
+			.left img{
+				margin: 50px 15px;
+			}
+			.contener{
+				width: 1818px;
+				float: left;
+			}
+			.top{
+				width: 100%;
+				background: #21242a;
+				height: 60px;
+			}
+			.top p{
+				text-align: center;
+				font-size: 18px;
+				color: #fff;
+				line-height: 60px;
+			}
+			.first{
+				width: 100%;
+				background: url(img/1.png) 0 0 no-repeat;
+				height: 630px;
+			}
+			.first .img1{
+				text-align: center;
+				padding-top: 40px;
+			}
+			.first .p1{
+				font-family: "微软雅黑";
+				font-size: 35px;
+				color: #fff;
+				font-weight: bold;
+				text-align: center;
+				margin-top:-128px ;
+				padding-bottom: 5px;
+			}
+			.first .p2{
+				font-family: "微软雅黑";
+				font-size: 65px;
+				color: #fff;
+				font-weight: bold;
+				text-align: center;
+			}
+			.list-nav{
+				height: 65px;
+				background: rgba(0,0,0,0.2);
+				margin-top: 53px;
+				position: relative;
+			}
+			.list-nav img:nth-of-type(2){
+				position: absolute;
+				left: 15px;
+				top: 10px;
+			}
+			.list-nav span{
+				font-family: "微软雅黑";
+				font-size: 14px;
+				color: #fff;
+				position: absolute;
+				left: 102px;
+				top: 25px;
+			}
+			.list-nav img:nth-of-type(3){
+				position: absolute;
+				left: 212px;
+				top: 15px;
+			}
+			.list-nav ul{
+				list-style: none;
+				position: absolute;
+				right: 0;
+				top: -1px;
+			}
+			.list-nav ul li{
+				float: right;
+				width: 145px;
+				height: 65px;
+				line-height: 65px;
+				text-align: center;
+				background: #cd5f74;
+				color: #fff;
+				font-size: 14px;
+				margin-right: 1px;	
+			}
+			.list-nav ul .active{
+				color: #f0ff00;
+			}
+			.second h2,.fourth h2{
+				color: #e94b59;
+				font-size: 30px;
+				text-align: center;
+				margin-top: 30px;
+			}
+			.liubian{
+				width: 1027px;
+				margin: 35px auto;
+			}
+			.liubian1{
+				text-align: right;
+				position: relative;
+			}
+			.liubian1 img,.liubian2 img,.liubian3 img{
+				margin-left: 5px;
+			}
+			.liubian1 p:nth-of-type(1){
+				text-align: center;
+				color: #fff;
+				font-size: 16px;
+				position: absolute;
+				left: 480px;
+				top: 75px;
+			}
+			.liubian1 p:nth-of-type(2){
+				color: #9cc602;
+				font-size: 16px;
+				position: absolute;
+				left: 609px;
+				top: 54px;
+			}
+			.liubian1 p:nth-of-type(3){
+				color: #0180c7;
+				font-size: 16px;
+				position: absolute;
+				left: 835px;
+				top: 54px;
+			}
+			.liubian1 p:nth-of-type(4){
+				color: #fff;
+				font-size: 16px;
+				position: absolute;
+				left: 713px;
+				top: 74px;
+			}
+			.liubian1 div:nth-of-type(1){
+				background: url(img1/os1.png) 0 0 no-repeat;
+				width: 64px;
+				height: 50px;
+				position: absolute;
+				left: 487px;
+				top: 25px;
+			}
+			.liubian1 div:nth-of-type(2){
+				background: url(img1/os2.png) 0 0 no-repeat;
+				width: 64px;
+				height: 50px;
+				position: absolute;
+				left: 719px;
+				top: 25px;
+			}
+			.liubian2{
+				margin: -20px 55px;
+				position: relative;
+			}
+			.liubian2 div{
+				background: url(img1/os3.png) 0 0 no-repeat;
+				width: 64px;
+				height: 50px;
+				position: absolute;
+				left: 36px;
+				top: 30px;
+			}
+			.liubian2 p:nth-of-type(1){
+				color: #fff;
+				font-size: 16px;
+				position: absolute;
+				left: 24px;
+				top: 74px;
+			}
+			.liubian2 p:nth-of-type(2){
+				color: #3bcfff;
+				font-size: 16px;
+				position: absolute;
+				left: 140px;
+				top: 55px;
+			}
+			.liubian2 p:nth-of-type(3){
+				color: #3bcfff;
+				font-size: 16px;
+				position: absolute;
+				left: 270px;
+				top: 55px;
+			}
+			.liubian2 p:nth-of-type(4){
+				color: #9cc602;
+				font-size: 16px;
+				position: absolute;
+				left: 368px;
+				top: 55px;
+			}
+			.liubian2 p:nth-of-type(5){
+				color: #9cc602;
+				font-size: 16px;
+				position: absolute;
+				left: 500px;
+				top: 55px;
+			}
+			.liubian2 p:nth-of-type(6){
+				color: #1f8fce;
+				font-size: 16px;
+				position: absolute;
+				left: 600px;
+				top: 55px;
+			}
+			.liubian2 p:nth-of-type(7){
+				color: #1f8fce;
+				font-size: 16px;
+				position: absolute;
+				left: 716px;
+				top: 55px;
+			}
+			.liubian3{
+				position: relative;
+				overflow: hidden;
+			}
+			.le{
+				float: left;
+			}
+			.liubian3 .le div{
+				background: url(img1/os4.png) 0 0 no-repeat;
+				width: 64px;
+				height: 50px;
+				position: absolute;
+				left: 268px;
+				top: 30px;
+			}
+			.liubian3 .le p:nth-of-type(1){
+				color: #3bcfff;
+				font-size: 16px;
+				position: absolute;
+				left: 155px;
+				top: 55px;
+			}
+			.liubian3 .le p:nth-of-type(2){
+				color: #fff;
+				font-size: 16px;
+				position: absolute;
+				left: 263px;
+				top: 74px;
+			}
+			.liubian3 .le p:nth-of-type(3){
+				color: #3bcfff;
+				font-size: 16px;
+				position: absolute;
+				left: 387px;
+				top: 55px;
+			}
+			.ri{
+				float: right;
+			}
+			.liubian3 .ri div:nth-of-type(1){
+				background: url(img1/os5.png) 0 0 no-repeat;
+				width: 64px;
+				height: 50px;
+				position: absolute;
+				left: 838px;
+				top: 30px;
+			}
+			.liubian3 .ri div:nth-of-type(2){
+				background: url(img1/os6.png) 0 0 no-repeat;
+				width: 64px;
+				height: 50px;
+				position: absolute;
+				left: 607px;
+				top: 30px;
+			}
+			.liubian3 .ri div:nth-of-type(3){
+				background: url(img1/os7.png) 0 0 no-repeat;
+				width: 64px;
+				height: 50px;
+				position: absolute;
+				left: 725px;
+				top: 35px;
+			}
+			.liubian3 .ri p:nth-of-type(1){
+				color: #ff6000;
+				font-size: 16px;
+				position: absolute;
+				left: 611px;
+				top: 75px;
+			}
+			.liubian3 .ri p:nth-of-type(2){
+				color: #fff;
+				font-size: 16px;
+				position: absolute;
+				left: 710px;
+				top: 75px;
+			}
+			.liubian3 .ri p:nth-of-type(3){
+				color: #ff6000;
+				font-size: 16px;
+				position: absolute;
+				left: 828px;
+				top: 75px;
+			}
+			.third{
+				background: #f2f0f0;
+				position: relative;
+			}
+			.san{
+				width: 0;
+				height: 0;
+				border: 20px solid transparent;
+				border-top-color: #fff;
+				margin: 0 auto;
+			}
+			.third h2,.fifth h2{
+				color: #e94b59;
+				font-size: 30px;
+				text-align: center;
+			}
+			.middle{
+				text-align: center;
+				margin-top: 30px;
+			}
+			.third span:nth-of-type(1){
+				font-size: 16px;
+				position: absolute;
+				top: 120px;
+				left: 832px;
+			}
+			.third span:nth-of-type(2){
+				font-size: 16px;
+				position: absolute;
+				top: 220px;
+				left: 933px;
+			}
+			.third span:nth-of-type(3){
+				font-size: 16px;
+				position: absolute;
+				top: 480px;
+				left: 832px;
+			}
+			.third span:nth-of-type(4){
+				font-size: 16px;
+				position: absolute;
+				top: 670px;
+				left: 933px;
+			}
+			.jiedao{
+				width: 426px;
+				height: 122px;
+				background: #d9e5ec;
+				border-radius: 4px;
+				position: absolute;
+				top: 155px;
+				left: 452px;
+			}
+			.weixiu{
+				width: 426px;
+				height: 122px;
+				background: #d9e5ec;
+				border-radius: 4px;
+				position: absolute;
+				top: 515px;
+				left: 452px;
+			}
+			.yuanxng{
+				width: 426px;
+				height: 122px;
+				background: #f3e1d8;
+				border-radius: 4px;
+				position: absolute;
+				top: 255px;
+				left: 939px;
+			}
+			.cheng{
+				width: 426px;
+				height: 122px;
+				background: #f3e1d8;
+				border-radius: 4px;
+				position: absolute;
+				top: 395px;
+				left: 939px;
+			}
+			.jiedao1{
+				width: 426px;
+				height: 122px;
+				position: absolute;
+				left: 465px;
+				top: 156px;
+			}
+			.yuanxing{
+				width: 426px;
+				height: 122px;
+				position: absolute;
+				left: 944px;
+				top: 262px;
+			}
+			.jiedao1 img,.yuanxing img{
+				margin: 15px 25px;
+			}
+			.jiedao1 ul,.yuanxing ul{
+				list-style: none;
+			}
+			.jiedao1 ul li,.yuanxing ul li{
+				float: left;
+				color: #a7aaac;
+				font-size: 16px;
+				margin:0 18px;
+			}
+			.guo{
+				position: absolute;
+				left:971px;
+				top: 428px;
+				color: #a7aaac;
+			}
+			.weixu{
+				position: absolute;
+				left:503px;
+				top: 538px;
+				
+			}
+			.weixu p{
+				color: #a7aaac;
+				text-align: center;
+			}
+			.fourth ul{
+				list-style: none;
+				width: 1026px;
+				margin: 20px auto;
+				overflow: hidden;
+			}
+			.fourth ul li{
+				float: left;
+				margin-right: 20px;
+				margin-bottom: 20px;
+			}
+			.fifth{
+				background: #f2f0f0;;
+			}
+			.liuyan{
+				width: 1026px;
+				margin: 0 auto 75px;
+			}
+			.liuyan p{
+				margin-left: 214px;
+				font-size: 20px;
+				margin-top: 40px;
+			}
+			.liuyan p input{
+				width: 460px;
+				height: 30px;
+			}
+			.liuyan p textarea{
+				width: 460px;
+				height: 165px;
+				margin-left: 100px;
+				margin-top: -25px;
+			}
+			.liuyan span{
+				display: block;
+				width: 100px;
+				height: 22px;
+				margin-top: 20px;
+			}
+			.liuyan button{
+				color: #fff;
+				width: 142px;
+				height: 48px;
+				background: #ff6360;
+				line-height: 48px;
+				text-align: center;
+				font-size: 20px;
+				border: none;
+				border-radius: 4px;
+				margin-left: 633px;
+				margin-top: 20px;
+			}
+			.boo{
+				height: 85px;
+				background: #ba0013;
+			}
+			.boo p{
+				font-size: 12px;
+				color: #ffd6da;
+				text-align: center;
+				padding-top: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="left">
+				<p></p>
+				<p></p>
+				<p></p>
+				<img src="img/zixun.png"/>
+			</div>
+			<div class="contener">
+				<div class="top">
+					<a href="index.html"><p>51DSP.cn</p></a>
+				</div>
+				<div class="first">
+					<div class="img1"><img src="img/2.png"/></div>
+					<p class="p1">大数据精准营销时代</p>
+					<p class="p2">DSP&nbsp;视频广告助你找到精准用户</p>
+					<div class="list-nav">
+						<img src="img/login3.png" alt="" />
+						<img src="img/login1.png" alt="" />
+						<span>2015年6月18日</span>
+						<img src="img/login2.png" alt="" />
+						<ul>
+							<a href="lianxi.html"><li>联系方式</li></a>
+							<a href="javascript:;"><li>关于我们</li></a>
+							<li class="active">外包项目</li>
+							<a href="mobile.html"><li>移动端广告</li></a>
+							<a href="AD.html"><li>视频广告</li></a>
+							<a href="jieshao.html"><li>51DSP介绍</li></a>
+						</ul>
+					</div>
+				</div>
+				<div class="second">
+					<h2>服务内容</h2>
+					<div class="liubian">
+						<div class="liubian1">
+							<img src="img1/liubian.png"/>
+							<img src="img1/liubian.png"/>
+							<img src="img1/liubian.png"/>
+							<img src="img1/shilv.png"/>
+							<img src="img1/greenliu.png"/>
+							<img src="img1/shilan.png"/>
+							<img src="img1/blue.png"/>
+							<img src="img1/liubian.png"/>
+							<div></div>
+							<div></div>
+							<p>平台项目</p>
+							<p>上线</p>
+							<p>进销存</p>
+							<p>后台项目</p>
+						</div>
+						<div class="liubian2">
+							<img src="img1/shifen.png"/>
+							<img src="img1/blueliu.png"/>
+							<img src="img1/blueliu.png"/>
+							<img src="img1/greenliu.png"/>
+							<img src="img1/greenliu.png"/>
+							<img src="img1/blue.png"/>
+							<img src="img1/blue.png"/>
+							<img src="img1/liubian.png"/>
+							<div></div>
+							<p>企业建站</p>
+							<p>活动专题</p>
+							<p>网站</p>
+							<p>平台设计</p>
+							<p>建站</p>
+							<p>客户后台</p>
+							<p>管理后台</p>
+						</div>
+						<div class="liubian3">
+							<div class="le">
+								<img src="img1/liubian.png"/>
+								<img src="img1/blueliu.png"/>
+								<img src="img1/shisky.png"/>
+								<img src="img1/blueliu.png"/>
+								<div></div>
+								<p>logo</p>
+								<p>UI设计</p>
+								<p>图片</p>
+							</div>
+							<div class="ri">
+								<img src="img1/liucheng.png"/>
+								<img src="img1/shicheng.png"/>
+								<img src="img1/liucheng.png"/>
+								<img src="img1/liubian.png"/>
+								<div></div>
+								<div></div>
+								<div></div>
+								<p>iOS</p>
+								<p>APP项目</p>
+								<p>Android</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="third">
+					<div class="san"></div>
+					<h2>服务流程</h2>
+					<div class="middle"><img src="img1/lliucheng.png"/></div>
+					<span>销售期</span>
+					<span>执行期</span>
+					<span>售后期</span>
+					<span>……</span>
+					<div class="jiedao"></div>
+					<div class="weixiu"></div>
+					<div class="yuanxng"></div>
+					<div class="cheng"></div>
+					<div class="jiedao1">
+						<img src="img1/xuqiu.png" alt="" />
+						<img src="img1/xuqiu1.png" alt="" />
+						<img src="img1/xuqiu2.png" alt="" />
+						<img src="img1/xuqiu3.png" alt="" />
+						<ul>
+							<li>接到需求</li>
+							<li>上门调研</li>
+							<li>需求评估</li>
+							<li>签署合同</li>
+						</ul>
+					</div>
+					<div class="yuanxing">
+						<img src="img1/yuanxing_03.png" alt="" />
+						<img src="img1/yuanxing_05.png" alt="" />
+						<img src="img1/yuanxing_07.png" alt="" />
+						<img src="img1/yuanxing_09.png" alt="" />
+						<ul>
+							<li>原型&PRD</li>
+							<li>开发计划</li>
+							<li>开发+测试</li>
+							<li>试运行</li>
+						</ul>
+					</div>
+					<div class="guo">
+						<img src="img1/chenguo_03.png"/>
+						<p>成果验收</p>
+					</div>
+					<div class="weixu">
+						<img src="img1/weixiu.png"/>
+						<p>进入系统维护期</p>
+					</div>
+				</div>
+				<div class="fourth">
+					<h2>客户案例</h2>
+					<ul>
+						<li><a href="javascript:;"><img src="img1/jiang_03.png" alt="" /></a></li>
+						<li><a href="javascript:;"><img src="img1/jiang_05.png" alt="" /></a></li>
+						<li><a href="javascript:;"><img src="img1/jiang_07.png" alt="" /></a></li>
+						<li><a href="javascript:;"><img src="img1/jiang_09.png" alt="" /></a></li>
+						<li><a href="javascript:;"><img src="img1/jiang_11.png" alt="" /></a></li>
+						<li><a href="javascript:;"><img src="img1/jiang_13.png" alt="" /></a></li>
+						<li><a href="javascript:;"><img src="img1/jiang_26.png" alt="" /></a></li>
+						<li><a href="javascript:;"><img src="img1/jiang_28.png" alt="" /></a></li>
+						<li><a href="javascript:;"><img src="img1/jiang_30.png" alt="" /></a></li>
+						<li><a href="javascript:;"><img src="img1/jiang_32.png" alt="" /></a></li>
+						<li><a href="javascript:;"><img src="img1/jiang_34.png" alt="" /></a></li>
+						<li><a href="javascript:;"><img src="img1/jiang_36.png" alt="" /></a></li>
+					</ul>
+				</div>
+				<div class="fifth">
+					<div class="san"></div>
+					<h2>咨询留言</h2>
+					<div class="liuyan">
+						<p>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" /></p>
+						<p>联系电话：<input type="text" /></p>
+						<p>邮箱地址：<input type="text" /></p>
+						<p><span>留言备注：</span><textarea name="" id="" cols="40" rows="10"></textarea></p>
+						<button>提交留言</button>
+					</div>
+					<div class="boo">
+						<p>京ICP备09083201号 京ICP证070419号  京公网安备:11010502026763</p>
+						<p>Copyright©2015 51dsp.com All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

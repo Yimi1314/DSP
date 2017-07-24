@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>移动端广告</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 1920px;
+				overflow: hidden;
+			}
+			.left{
+				width: 102px;
+				height: 3681px;
+				background: #051623;
+				float:left;
+			}
+			.left p{
+				width: 35px;
+				height: 1px;
+				background: #fff;
+				margin: 14px 32px;
+			}
+			.left img{
+				margin: 50px 15px;
+			}
+			.contener{
+				width: 1818px;
+				float: left;
+			}
+			.top{
+				width: 100%;
+				background: #21242a;
+				height: 60px;
+			}
+			.top p{
+				text-align: center;
+				font-size: 18px;
+				color: #fff;
+				line-height: 60px;
+			}
+			.first{
+				width: 100%;
+				background: url(img/1.png) 0 0 no-repeat;
+				height: 630px;
+			}
+			.first .img1{
+				text-align: center;
+				padding-top: 40px;
+			}
+			.first .p1{
+				font-family: "微软雅黑";
+				font-size: 35px;
+				color: #fff;
+				font-weight: bold;
+				text-align: center;
+				margin-top:-128px ;
+				padding-bottom: 5px;
+			}
+			.first .p2{
+				font-family: "微软雅黑";
+				font-size: 65px;
+				color: #fff;
+				font-weight: bold;
+				text-align: center;
+			}
+			.list-nav{
+				height: 65px;
+				background: rgba(0,0,0,0.2);
+				margin-top: 53px;
+				position: relative;
+			}
+			.list-nav img:nth-of-type(2){
+				position: absolute;
+				left: 15px;
+				top: 10px;
+			}
+			.list-nav span{
+				font-family: "微软雅黑";
+				font-size: 14px;
+				color: #fff;
+				position: absolute;
+				left: 102px;
+				top: 25px;
+			}
+			.list-nav img:nth-of-type(3){
+				position: absolute;
+				left: 212px;
+				top: 15px;
+			}
+			.list-nav ul{
+				list-style: none;
+				position: absolute;
+				right: 0;
+				top: -1px;
+			}
+			.list-nav ul li{
+				float: right;
+				width: 145px;
+				height: 65px;
+				line-height: 65px;
+				text-align: center;
+				background: #cd5f74;
+				color: #fff;
+				font-size: 14px;
+				margin-right: 1px;	
+			}
+			.list-nav ul .active{
+				color: #f0ff00;
+			}
+			.second{
+				margin-top: 30px;
+			}
+			.second p:nth-of-type(1),.second p:nth-of-type(2){
+				font-size: 20px;
+				text-align: center;
+				line-height: 1.5;
+			}
+			.second p:nth-of-type(1) span{
+				color: #ea5413;
+				font-weight: bold;
+				font-size: 30px;
+			}
+			.second>div{
+				text-align: center;
+				margin: 55px auto 30px;
+			}
+			.third{
+				height: 416px;
+				background: #f2f0f0;
+				position: relative;
+			}
+			.san{
+				width: 0;
+				height: 0;
+				border:20px solid transparent;
+				border-top-color: #fff;
+				margin: 0 auto;
+			}
+			.third h2,.fifth h2{
+				color: #e94b59;
+				text-align: center;
+				font-size: 30px;
+				font-weight: bold;
+			}
+			#imgs27{
+				width: 1026px;
+				height: 283px;
+				margin: 23px auto 0;
+			}
+			#imgs27 a{
+				display: inline-block;
+				margin-right: 17px;
+				padding-bottom: 17px;
+			}
+			.fourth h2,.sixth h2{
+				color: #e94b59;
+				text-align: center;
+				font-size: 30px;
+				font-weight: bold;
+				margin: 30px auto 15px;
+			}
+			.imgs12{
+				width: 1026px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.haidao{
+				float: left;
+				width: 136px;
+				height: 173px;
+				border-radius: 6px;
+				background: #f2f0f0;
+				margin-right: 35px;
+				margin-bottom: 20px;
+			}
+			.haidao div:nth-of-type(1){
+				height: 112px;
+				text-align: center;
+			}
+			.haidao div:nth-of-type(1) img{
+				margin: 20px 26px;
+			}
+			.haidao div:nth-of-type(2){
+				height: 61px;
+				background: #5ebff6;
+				text-align: center;
+				font-size: 16px;
+				color: #fff;
+			}
+			.haidao div:nth-of-type(2) p:nth-of-type(1){
+				padding-top: 8px;
+			}
+			#hai{
+				line-height: 43px;
+			}
+			.fifth{
+				background: #f2f0f0;
+			}
+			.fifth .imgs3{
+				text-align: center;
+				padding-bottom: 30px;
+			}
+			.fifth .imgs3 img{
+				margin-right: 42px;
+				margin-left: 42px;
+			}
+			.sixth{
+				position: relative;
+			}
+			.sixth h3,.seventh h3{
+				text-align: center;
+				margin-bottom: 15px;
+			}
+			.sixth .sixp,.seventh .sixp{
+				text-align: center;
+				font-size: 16px;
+			}
+			.sixth .img52{
+				text-align: center;
+				margin-top: 10px;
+				margin-left: 80px;
+			}
+			.ID{
+				width: 300px;
+				height: 222px;
+				background: #fff6f7;
+				position: absolute;
+				top: 180px;
+				left: 357px;
+			}
+			.ID p{
+				font-size: 14px;
+				color: #060001;
+				padding-left: 10px;
+			}
+			.news{
+				width: 117px;
+				height: 150px;
+				position: absolute;
+				top: 157px;
+				left: 1245px;
+			}
+			.news p{
+				font-size: 14px;
+				line-height: 31px;
+			}
+			.seventh{
+				position: relative;
+				background: #f2f0f0;
+			}
+			.seventh .fifth1{
+				text-align: center;
+				margin-top: 40px;
+				padding-bottom: 50px;
+			}
+			.shuxing{
+				width: 300px;
+				color: #0080c8;
+				position: absolute;
+				top: 138px;
+				left: 611px;
+			}
+			.shuxing p,.diyu p{
+				margin-left: 25px;
+				margin-top: 7px;
+			}
+			.shuxing ul,.diyu ul{
+				height: 40px;
+			}
+			.shuxing ul li{
+				float: left;
+				margin-left: 44px;
+				margin-top: 5px;
+			}
+			.diyu{
+				width: 422px;
+				color: #ff6000;
+				position: absolute;
+				top: 265px;
+				left: 512px;
+			}
+			.diyu ul li{
+				float: left;
+				margin-left: 39px;
+				margin-top: 5px;
+			}
+			.xingqu{
+				color: #9ac600;
+				width: 194px;
+				position: absolute;
+				top: 167px;
+				left: 962px;
+			}
+			.xingqu p{
+				margin-left: 13px;
+				margin-top: 7px;
+			}
+			.xingqu ul{
+				height: 98px;
+			}
+			.xingqu ul li{
+				float: left;
+				width: 66px;
+				margin-left: 30px;
+				margin-top: 5px;
+			}
+			.xiaofei{
+				width: 290px;
+				color: #bb0303;
+				position: absolute;
+				top: 226px;
+				left: 1170px;
+			}
+			.xiaofei p{
+				text-align: center;	
+			}
+			.xiaofei ul{
+				height: 120px;
+			}
+			.xiaofei ul li{
+				float: left;
+				width: 80px;
+				margin-left: 16px;
+				margin-top: 5px;
+			}
+			.boo{
+				height: 85px;
+				background: #ba0013;
+			}
+			.boo p{
+				font-size: 12px;
+				color: #ffd6da;
+				text-align: center;
+				padding-top: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="left">
+				<p></p>
+				<p></p>
+				<p></p>
+				<img src="img/zixun.png"/>
+			</div>
+			<div class="contener">
+				<div class="top">
+					<a href="index.html"><p>51DSP.cn</p></a>
+				</div>
+				<div class="first">
+					<div class="img1"><img src="img/2.png"/></div>
+					<p class="p1">大数据精准营销时代</p>
+					<p class="p2">DSP&nbsp;视频广告助你找到精准用户</p>
+					<div class="list-nav">
+						<img src="img/login3.png" alt="" />
+						<img src="img/login1.png" alt="" />
+						<span>2015年6月18日</span>
+						<img src="img/login2.png" alt="" />
+						<ul>
+							<a href="lianxi.html"><li>联系方式</li></a>
+							<a href="javascript:;"><li>关于我们</li></a>
+							<a href="waibao.html"><li>外包项目</li></a>
+							<li class="active">移动端广告</li>
+							<a href="AD.html"><li>视频广告</li></a>
+							<a href="jieshao.html"><li>51DSP介绍</li></a>
+						</ul>
+					</div>
+				</div>
+				<div class="second">
+					<p>51dsp拥有超过<span>30万</span>个Pad APP和<span>独家</span>Pad互联网资源，</p>
+					<p>多种广告形式，精准分析人群，直达目标客户群</p>
+					<div><img src="img1/49.png"/></div>
+				</div>
+				<div class="third">
+					<div class="san"></div>
+					<h2>APP资源-国内</h2>
+					<div id="imgs27">
+						<a href="javascript:;"><img src="img1/tou_25.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_03.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_05.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_08.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_10.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_12.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_14.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_16.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_19.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_22.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_38.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_40.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_42.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_43.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_46.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_49.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_51.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_53.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_56.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_58.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_70.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_72.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_74.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_76.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_78.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_80.png" alt="" /></a>
+						<a href="javascript:;"><img src="img1/tou_82.png" alt="" /></a>
+					</div>
+				</div>
+				<div class="fourth">
+					<h2>APP资源-国外</h2>
+					<div class="imgs12">
+						<div class="haidao">
+							<div><img src="img1/tan_03.png"/></div>
+							<div>
+								<p>坦克英雄</p>
+								<p>激光大战</p>
+							</div>
+						</div>
+						<div class="haidao">
+							<div><img src="img1/tan_05.png"/></div>
+							<div>
+								<p id="hai">海岛奇兵</p>
+							</div>
+						</div>
+						<div class="haidao">
+							<div><img src="img1/tan_07.png"/></div>
+							<div>
+								<p id="hai">YUOTUBE</p>
+							</div>
+						</div>
+						<div class="haidao">
+							<div><img src="img1/tan_09.png"/></div>
+							<div>
+								<p id="hai">TWITTER</p>
+							</div>
+						</div>
+						<div class="haidao">
+							<div><img src="img1/tan_11.png"/></div>
+							<div>
+								<p>汤姆猫</p>
+								<p>爱安吉拉</p>
+							</div>
+						</div>
+						<div class="haidao">
+							<div><img src="img1/tan_13.png"/></div>
+							<div>
+								<p>会说话的</p>
+								<p>金杰猫2</p>
+							</div>
+						</div>
+						<div class="haidao">
+							<div><img src="img1/tan_26.png"/></div>
+							<div>
+								<p id="hai">忍者跳跃</p>
+							</div>
+						</div>
+						<div class="haidao">
+							<div><img src="img1/tan_28.png"/></div>
+							<div>
+								<p id="hai">密室逃脱</p>
+							</div>
+						</div>
+						<div class="haidao">
+							<div><img src="img1/tan_30.png"/></div>
+							<div>
+								<p id="hai">猴子大炮</p>
+							</div>
+						</div>
+						<div class="haidao">
+							<div><img src="img1/tan_32.png"/></div>
+							<div>
+								<p id="hai">未来射击</p>
+							</div>
+						</div>
+						<div class="haidao">
+							<div><img src="img1/tan_34.png"/></div>
+							<div>
+								<p>摩托车</p>
+								<p>大冒险</p>
+							</div>
+						</div>
+						<div class="haidao">
+							<div><img src="img1/tan_36.png"/></div>
+							<div>
+								<p id="hai">其他</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fifth">
+					<div class="san"></div>
+					<h2>资源位置</h2>
+					<div class="imgs3">
+						<a href="javascript:;">
+							<img src="img1/53.png" alt="" />
+						</a>
+						<a href="javascript:;">
+							<img src="img1/54.png" alt="" />
+						</a>
+						<a href="javascript:;">
+							<img src="img1/55.png" alt="" />
+						</a>
+					</div>
+				</div>
+				<div class="sixth">
+					<h2>如何定向精准用户</h2>
+					<h3>确定用户的属性</h3>
+					<p class="sixp">我们的核心是如何找到那个更精准的他</p>
+					<div class="img52"><img src="img1/52.png"/></div>
+					<div class="ID"> 
+						<p>ID ：</p>
+						<p>08AB03C4-E0D5-495F-83AC-07DE75F71AAD</p>
+						<p>性别：男</p>
+						<p>年龄：25-30岁</p>
+						<p>状况：无车，有房（按揭），有手机支付习惯</p>
+						<p>爱好：旅游、投资、汽车</p>
+						<p>地域：北京、天津、上海、深圳、广州………</p>
+						<p>网络情况：wifi、3G、4G</p>
+						<p>手机操作系统：安卓、IOS、Windows</p>
+					</div>
+					<div class="news">
+						<p>新闻财经      20%</p>
+						<p>娱乐旅游      20%</p>
+						<p>房产类      20%</p>
+						<p>汽车类      20%</p>
+						<p>3C科技      20%</p>
+					</div>
+				</div>
+				<div class="seventh">
+					<div class="san"></div>
+					<h3>四种受众数据</h3>
+					<p class="sixp">最精细的人群定向选择，详解每一个消费者，最准确地了解其价值</p>
+					<div class="fifth1" >
+						<img src="img1/seven_03.png" alt="" />
+					</div>
+					<div class="shuxing">
+						<p style="font-size: 16px; font-weight: bold;">受众属性：</p>
+						<p>支持性别、年龄、学历等26个受众细分</p>
+						<ul>
+							<li>性别</li>
+							<li>年龄</li>
+							<li>学历</li>
+							<li>收入</li>
+							<li>职业</li>
+							<li>人生阶段</li>
+						</ul>
+					</div>
+					<div class="diyu">
+						<p style="font-size: 16px; font-weight: bold;">地域分布：</p>
+						<p>涵盖34个省，5个自治区、4个直辖市、2个特别行政区以及各省的二三线城市，地域覆盖多达399个市</p>
+						<ul>
+							<li>直辖市</li>
+							<li>特别行政区</li>
+							<li>省会城市</li>
+							<li>二线城市</li>
+							<li>自治区</li>
+							<li>三线城市</li>
+						</ul>
+					</div> 
+					<div class="xingqu">
+						<p style="font-size: 16px; font-weight: bold;">兴趣关注：</p>
+						<p>支持12大类产品</p>
+						<ul>
+							<li>个护美容</li>
+							<li>汽车</li>
+							<li>影视娱乐</li>
+							<li>IT数码</li>
+							<li>体育</li>
+							<li>房地产</li>
+							<li>金融财经</li>
+							<li>游戏</li>
+							<li>社交</li>
+						</ul>
+					</div> 
+					<div class="xiaofei">
+						<p style="font-size: 16px; font-weight: bold;">消费倾向：</p>
+						<ul>
+							<li>财经金融</li>
+							<li>汽车房产</li>
+							<li>3C 产品</li>
+							<li>家居家装</li>
+							<li>生活日用</li>
+							<li>鞋包服饰</li>
+							<li>体育装备</li>
+							<li>户外用品</li>
+							<li>美妆个护</li>
+							<li>食品饮品</li>
+							<li>文娱礼品</li>
+							<li>健康保健品</li>
+							<li>培训教育</li>
+							<li>电子游戏</li>
+							<li>奢侈品…</li>
+						</ul>
+					</div>
+					<div class="boo">
+						<p>京ICP备09083201号 京ICP证070419号  京公网安备:11010502026763</p>
+						<p>Copyright©2015 51dsp.com All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

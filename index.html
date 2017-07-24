@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>51DSP</title>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 1920px;
+				overflow: hidden;
+			}
+			.left{
+				width: 102px;
+				height: 4397px;
+				background: #051623;
+				float:left;
+			}
+			.left p{
+				width: 35px;
+				height: 1px;
+				background: #fff;
+				margin: 14px 32px;
+			}
+			.left img{
+				margin: 50px 15px;
+			}
+			.contener{
+				width: 1818px;
+				float: left;
+			}
+			.top{
+				width: 100%;
+				background: #21242a;
+				height: 60px;
+			}
+			.top p{
+				text-align: center;
+				font-size: 18px;
+				color: #fff;
+				line-height: 60px;
+			}
+			.first{
+				width: 100%;
+				background: url(img/1.png) 0 0 no-repeat;
+				/*height: 630px;*/
+			}
+			.first .img1{
+				text-align: center;
+				padding-top: 40px;
+			}
+			.first .p1{
+				font-family: "微软雅黑";
+				font-size: 35px;
+				color: #fff;
+				font-weight: bold;
+				text-align: center;
+				margin-top:-128px ;
+				padding-bottom: 5px;
+			}
+			.first .p2{
+				font-family: "微软雅黑";
+				font-size: 65px;
+				color: #fff;
+				font-weight: bold;
+				text-align: center;
+			}
+			.list-nav{
+				height: 65px;
+				background: rgba(0,0,0,0.2);
+				margin-top: 53px;
+				position: relative;
+			}
+			.list-nav img:nth-of-type(2){
+				position: absolute;
+				left: 15px;
+				top: 10px;
+			}
+			.list-nav span{
+				font-family: "微软雅黑";
+				font-size: 14px;
+				color: #fff;
+				position: absolute;
+				left: 102px;
+				top: 25px;
+			}
+			.list-nav img:nth-of-type(3){
+				position: absolute;
+				left: 212px;
+				top: 15px;
+			}
+			.list-nav ul{
+				list-style: none;
+				position: absolute;
+				right: 0;
+				top: -1px;
+			}
+			.list-nav ul li{
+				float: right;
+				width: 145px;
+				height: 65px;
+				line-height: 65px;
+				text-align: center;
+				background: #cd5f74;
+				color: #fff;
+				font-size: 14px;
+				margin-right: 1px;	
+			}
+			.second{
+				width: 100%;
+				position: relative;
+			}
+			.second .A,.third .A,.fourth .A,.fifth .A,.sixth .A,.seventh .A{
+				text-align: center;
+				margin-top: 50px;
+			}
+			.third .A>img,.fifth .A>img,.seventh .A>img{
+				padding-top: 50px;
+			}
+			.second p:nth-of-type(1),.fourth p,.sixth p{
+				color: #a1a1a1;
+				text-align: center;
+				font-size: 12px;
+			}
+			.second p:nth-of-type(2){
+				text-align: center;
+				line-height: 50px;
+				margin-top: 20px;
+			}
+			.second p:nth-of-type(2) button{
+				width: 150px;
+				height: 50px;
+				background: #e94b59;
+				color: #fff;
+				font-family: "微软雅黑";
+				font-size: 20px;
+				border: none;
+			}
+			.As{
+				text-align: center;
+				margin-top: 30px;
+			}
+			.second .Ps{
+				width: 850px;
+				height: 35px;
+				position: absolute;
+				bottom: -30px;
+				left: 540px;
+			}
+			.second .Ps>div{
+				width: 65px;
+				height: 36px;
+				float: left;
+				margin-left: 12px;
+				margin-right: 135px;
+			}
+			.second .Ps .ps1{
+				font-size: 14px;
+				color: #000;
+				font-weight: bold;
+			}
+			.second .Ps .ps2{
+				color: #272727;
+				font-size: 12px;
+				margin-top: -15px;
+			}
+			.third{
+				width: 100%;
+				background: #cb1e2f;
+			}
+			.third p,.fifth p,.seventh p{
+				text-align: center;
+				font-size: 12px;
+				color: #fff;
+			}
+			.Cs{
+				text-align: center;
+				margin-top: 65px;
+				position: relative;
+			}
+			.Cs img:nth-of-type(2){
+				position: absolute;
+				left: 769px;
+				top: -3px;
+			}
+			.Cs img:nth-of-type(3){
+				position: absolute;
+				left: 1000px;
+				top: -11px;
+			}
+			.Cs img:nth-of-type(4){
+				position: absolute;
+				left: 731px;
+				top: 151px;
+			}
+			.Cs div{
+				color: #fff;
+				font-size: 20px;
+			}
+			.Cs div:nth-of-type(1){
+				position: absolute;
+				left: 666px;
+				top: -37px;
+			}
+			.Cs div:nth-of-type(2){
+				position: absolute;
+				left: 1018px;
+				top: -28px;
+			}
+			.Cs div:nth-of-type(3){
+				position: absolute;
+				left: 663px;
+				top: 120px;
+			}
+			.fourth{
+				width: 100%;
+			}
+			.Vs{
+				width: 842px;
+				height: 350px;
+				margin: 0 auto;
+			}
+			.Vs div{
+				float: left;
+				margin: 62px 21px 42px 21px;
+			}
+			.Vs div:nth-of-type(2),.Vs div:nth-of-type(4){
+				line-height: 219px;
+				font-size: 40px;
+				font-weight: bold;
+			}
+			.Vs div>p{
+				font-size: 20px;
+				padding-top: 25px;
+				font-family: "微软雅黑";
+				color: #000000;
+			}
+			.fifth{
+				background: #cb1d2e;
+			}
+			.Ms{
+				width: 624px;
+				height: 360px;
+				margin: 45px auto;
+			}
+			.Ms div{
+				position: relative;
+			}
+			.Ms img:nth-of-type(2){
+				position: absolute;
+				top: -20px;
+				left: 213px;
+			}
+			#pingtai{
+				position: absolute;
+				top: 24px;
+				left: 328px;
+			}
+			#pingtai>p{
+				font-size: 30px;
+			}
+			#dizhi .p1{
+				position: absolute;
+				right: 95px;
+				bottom: 127px;
+			}
+			#dizhi .p2{
+				position: absolute;
+				right: 25px;
+				bottom: 79px;
+			}
+			#dizhi span{
+				font-size: 20px;
+			}
+			.sixth .a22{
+				text-align: center;
+			}
+			.seventh{
+				background: #ca192b;
+			}
+			.seventh .Cd{
+				width: 672px;
+				height: 334px;
+				margin: 40px auto;
+				overflow: hidden;
+			}
+			.cdl{
+				float: left;
+				margin-top: 50px;
+			}
+			.cdl p{
+				color: #fffc00;
+				font-size: 40px;
+			}
+			.cdr{
+				float: right;
+				position: relative;
+			}
+			.cdr p{
+				width: 180px;
+				height: 104px;
+				color: #ca192b;
+				font-size: 20px;
+				position: absolute;
+				top: 70px;
+				left: 60px;
+			}
+			.cdr button{
+				width: 170px;
+				height: 35px;
+				border: none;
+				border-radius: 4px;
+				color: #fff;
+				font-size: 20px;
+				position: absolute;
+				bottom: 75px;
+				left: 60px;
+				background: #ca192b;
+			}
+			.bottom{
+				height: 84px;
+				background: #ba0013;
+			}
+			.bottom p{
+				color: #fff;
+				font-size: 12px;
+				text-align: center;
+				padding-top: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="left">
+				<p></p>
+				<p></p>
+				<p></p>
+				<img src="img/zixun.png"/>
+			</div>
+			<div class="top">
+				<a href="index.html"><p>51DSP.cn</p></a>
+			</div>
+			<div class="contener">
+			    <!--Slide 1-->
+		        <div class="first">
+		        	<div class="img1"><img class="animated flash" src="img/2.png"/></div>
+					<p class="p1 animated bounceInLeft">大数据精准营销时代</p>
+					<p class="p2 animated bounceInRight">DSP&nbsp;视频广告助你找到精准用户</p>
+					<div class="list-nav">
+							<img src="img/login3.png" alt="" />
+							<img src="img/login1.png" alt="" />
+							<span>2015年6月18日</span>
+							<img src="img/login2.png" alt="" />
+						<ul>
+							<a href="lianxi.html"><li>联系方式</li></a>
+							<a href="javascript:;"><li>关于我们</li></a>
+							<a href="waibao.html"><li>外包项目</li></a>
+							<a href="mobile.html"><li>移动端广告</li></a>
+							<a href="AD.html"><li>视频广告</li></a>
+							<a href="jieshao.html"><li>51DSP介绍</li></a>
+						</ul>
+					</div>
+		        </div>
+		        <!--Slide 2-->
+		        <div class="second">
+		        	<div class="A"><img src="img/A.png"/></div>
+					<p>依托大数据时代下的精准营销51DSP是助力企业腾飞的首选伙伴</p>
+					<p><button>查看详情</button></p>
+					<div class="As"><img src="img/As.png"/></div>
+					<div class="Ps">
+						<div>
+							<p class="ps1">全流量</p>
+							<p class="ps2">最广覆盖面</p>
+						</div>
+						<div>
+							<p class="ps1">大数据</p>
+							<p class="ps2">最准找到人</p>
+						</div>
+						<div>
+							<p class="ps1">精算法</p>
+							<p class="ps2">最优出效率</p>
+						</div>
+						<div>
+							<p class="ps1">懂市场</p>
+							<p class="ps2">最丰富经验</p>
+						</div>
+					</div>
+		        </div>
+		        <!--Slide 3-->
+		        <div class="third">
+		        	<div class="A"><img src="img/C.png"/></div>
+					<p>强势的媒体资源 / 资深的数据团队 / 精准的保证</p>
+					<div class="Cs">
+						<img src="img/Cs.png"/>
+						<img src="img/c1.png"/>
+						<img src="img/c2.png"/>
+						<img src="img/c3.png"/>
+						<div>强势的媒体资源</div>
+						<div>资深的数据团队</div>
+						<div>精准的保证</div>
+					</div>
+		        </div>
+		        <!--Slide 4-->
+		        <div class="fourth">
+		        	<div class="A"><img src="img/V.png"/></div>
+					<p>各大视频网站资源通过大数据分析定位人群，定位投放，品牌效果双收益</p>
+					<div class="Vs">
+						<div>
+							<img src="img/v1.png"/>
+							<p>大数据分析定位人群</p>
+						</div>
+						<div>+</div>
+						<div>
+							<img src="img/v2.png"/>
+							<p>定位投放</p>
+						</div>
+						<div>=</div>
+						<div>
+							<img src="img/v3.png"/>
+							<p>品牌效果双收益</p>
+						</div>
+					</div>
+		        </div>
+		        <!--Slide 5-->
+		        <div class="fifth">
+		        	<div class="A"><img src="img/M.png"/></div>
+					<p>吸纳国内/外媒体资源，国内独家海外媒体对接平台，发挥平台优势承载企业翱翔~</p>
+					<div class="Ms">
+						<div>
+							<img src="img/m3.png"/>
+							<img src="img/m1.png"/>
+							<div id="pingtai">
+								<p>平台优势</p>
+								<p>承载企业</p>
+							</div>
+							<div id="dizhi">
+								<p class="p1">
+									<img class="img1" src="img/m2.png"/>
+									<span>国内/国内媒体资源</span>
+								</p>
+								<p class="p2">
+									<img class="img2" src="img/m2.png"/>
+									<span>国内独家海外媒体对接平台</span>
+								</p>
+							</div>
+						</div>
+					</div>
+		        </div>
+		        <!--Slide 6-->
+		        <div class="sixth">
+		        	<div class="A"><img src="img/A2.png"/></div>
+					<p>51dsp.com是一家提供互联网广告传播服务与技术平台服务的高新技术型公司</p>
+					<div class="a22"><img src="img/a22_03.png"/></div>
+		        </div>
+		        <!--Slide 7-->
+		        <div class="seventh">
+		        	<div class="A"><img src="img/CC.png"/></div>
+					<p>速度、效率、是我们应答的第一原则</p>
+					<div class="Cd">
+						<div class="cdl">
+							<p>广告咨询热线</p>
+							<img src="img/tel.png" alt="" />
+						</div>
+						<div class="cdr">
+							<img src="img/bianli.png"/>
+							<p>点击下方按钮，即刻为企业投放广告留言，我们会立即与您取得联系~</p>
+							<button>立即留言</button>
+						</div>
+					</div>
+					<div class="bottom">
+						<p>京ICP备09083201号 京ICP证070419号  京公网安备:11010502026763</p>
+						<p>Copyright©2015 51dsp.com All Rights Reserved</p>
+					</div>
+		        </div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/swiper.animate.min.js"></script>
+	<script type="text/javascript"> 
+	</script>
+</html>
